@@ -6,7 +6,7 @@
     <v-dialog v-model="show" fullscreen transition="dialog-bottom-transition" :overlay="false" scrollable>
       <v-card>
         <v-tabs fixed centered>
-          <v-toolbar style="flex: 0 0 auto;" color="blue-grey darken-2" class="dark">
+          <v-toolbar style="flex: 0 0 auto;" color="darken-2" class="dark" v-bind:class="[historySectionColor]">
             <v-btn icon @click.native="show = false" dark>
               <v-icon>close</v-icon>
             </v-btn>
@@ -15,7 +15,7 @@
             <v-toolbar-items>
             </v-toolbar-items>
           </v-toolbar>
-          <v-tabs-bar color="blue-grey darken-2">
+          <v-tabs-bar color="darken-2" v-bind:class="[historySectionColor]">
             <v-tabs-slider color="white"></v-tabs-slider>
             <v-tabs-item :href="'#generalSettings'" ripple>
               General Settings
@@ -49,7 +49,9 @@
       generalSettings
     },
     computed: {
-
+      historySectionColor: function() {
+        return this.$store.state.config.historySectionColor;
+      }
     },
     methods: {
 

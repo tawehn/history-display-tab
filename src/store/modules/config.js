@@ -3,6 +3,7 @@ import Vue from 'vue'
 
 // initial state
 const state = {
+    historySectionColor: 'blue-grey',
     historyItemsToShow: 10,
     historySections: [
         {'id': '7267fdbd-51cd-4075-bce2-303642eec5c2','name': 'Github Issues', regex: 'github.com/.+/.+/issues/'},
@@ -12,8 +13,8 @@ const state = {
         {'id': '2946631a-0cdb-4073-943b-957bd3f0b8c7','name': 'Hacker News', regex: 'news.ycombinator.com/item\?id='},
         {'id': '95d0fe7d-a587-494c-9aa1-eeb3142c0cb4','name': 'Reddit', regex: 'reddit.com/r/.+/comments/.+'},
         {'id': '4aba4c5d-02a7-4b0c-a36b-2bad5807af0a','name': 'Wiki', regex: 'wiki'},
-
-    ]
+    ],
+    colors: ['red','pink','purple','deep-purple','indigo','blue','light-blue','cyan','teal','green','light-green','lime','yellow','amber','orange','deep-orange','brown','blue-grey','grey']
 }
 
 // getters
@@ -31,6 +32,12 @@ const actions = {
 const mutations = {
     updateHistoryItemsToShow(state,historyItemsToShow) {
         state.historyItemsToShow = historyItemsToShow
+    },
+    updateHistorySectionColor(state,newColor) {
+        state.historySectionColor = newColor
+    },
+    updateHistoryItemsToShow(state,newValue) {
+        state.historyItemsToShow = newValue
     },
     updatehistorySections(state,historySections) {
         state.historySections = historySections
