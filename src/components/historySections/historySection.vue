@@ -1,7 +1,7 @@
 <template>
     <v-card raised tile  class="white--text blue-grey darken-2">
-        <v-card-title primary-title>
-            <div class="display-1">{{section.name}}</div>
+        <v-card-title primary-title class="text-xs-center">
+         <h3>{{section.name}}</h3>
         </v-card-title>
         <v-card-text>
             <template>
@@ -83,13 +83,24 @@ export default {
 }
 
 .card__title {
-    padding:8px;
+    padding:4px;
 }
+
+.card__title > h3 {
+    text-align:center;
+    width:100%;
+
+}
+
 .list__tile__title {
     height: auto;
     line-height: normal;
     text-overflow: unset;
     white-space:unset;
+}
+
+ul.list {
+    background:rgba(0, 0, 0, 0.5);
 }
 
 </style>
