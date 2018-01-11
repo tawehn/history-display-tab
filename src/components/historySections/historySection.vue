@@ -1,5 +1,5 @@
 <template>
-    <v-card raised tile v-bind:class="[historySectionBackgroundColor,'white--text','darken-2']">
+    <v-card raised tile v-bind:class="[historySectionBackgroundColor,'white--text',]">
         <v-card-title primary-title class="text-xs-center">
             <h3>{{section.name}}</h3>
         </v-card-title>
@@ -79,7 +79,7 @@ export default {
     }
 
     .listLink {
-        color: white;
+        color: black;
         text-decoration: none;
     }
 
@@ -104,7 +104,7 @@ export default {
     }
 
     ul.list {
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(255, 255, 255, 0.5);
     }
 
 </style>

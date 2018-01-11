@@ -5,9 +5,9 @@
     </v-btn>
     <v-dialog v-model="show" fullscreen transition="dialog-bottom-transition" :overlay="false" scrollable>
       <v-card>
-        <v-tabs fixed centered>
-          <v-toolbar style="flex: 0 0 auto;" color="darken-2" class="dark" v-bind:class="[historySectionColor]">
-            <v-btn icon @click.native="show = false" dark>
+        <v-tabs  centered>
+          <v-toolbar style="flex: 0 0 auto;" dark v-bind:class="[historySectionColor]">
+            <v-btn icon @click.native="show = false">
               <v-icon>close</v-icon>
             </v-btn>
             <v-toolbar-title>Settings</v-toolbar-title>
@@ -15,12 +15,13 @@
             <v-toolbar-items>
             </v-toolbar-items>
           </v-toolbar>
-          <v-tabs-bar color="darken-2" v-bind:class="[historySectionColor]">
+          <v-tabs-bar v-bind:class="[historySectionColor]" dark>
             <v-tabs-slider color="white"></v-tabs-slider>
-            <v-tabs-item :href="'#generalSettings'" ripple>
+            <v-tabs-item :href="'#generalSettings'" ripple white>
               General Settings
             </v-tabs-item>
-            <v-tabs-item :href="'#historySections'">
+
+            <v-tabs-item :href="'#historySections'" ripple white>
               Manage History Sections
             </v-tabs-item>
 

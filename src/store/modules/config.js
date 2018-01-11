@@ -3,7 +3,7 @@ import Vue from 'vue'
 
 // initial state
 const state = {
-    historySectionColor: 'blue-grey',
+    historySectionColor: 'blue',
     historyItemsToShow: 10,
     historySections: [
         {'id': '7267fdbd-51cd-4075-bce2-303642eec5c2','name': 'Github Issues', regex: 'github.com/.+/.+/issues/'},
